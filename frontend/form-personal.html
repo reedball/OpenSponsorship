@@ -1,0 +1,117 @@
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" class="form-control" name="location" data-ng-model="formData.location" placeholder="Location">
+                <span style="color:red" data-ng-show="myForm.location.$dirty && myForm.location.$invalid"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="street1">Street 1</label>
+                <input type="text" class="form-control" name="street1" data-ng-model="formData.street1"
+                    placeholder="Street1">
+                <span style="color:red" data-ng-show="myForm.street1.$dirty && myForm.street1.$invalid"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="street2">Street 2</label>
+                <input type="text" class="form-control" name="street2" placeholder="Street2"
+                    data-ng-model="formData.street2">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="county">County</label>
+                <input type="text" class="form-control" name="county" placeholder="County" data-ng-model="formData.county">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="zip">Zip Code</label>
+                <input type="number" class="form-control" name="zip" data-ng-model="formData.zip" ui-mask="99999"
+                    placeholder="ZipCode" ui-mask-placeholder="" ui-mask-placeholder-char="">
+                <span style="color:red" data-ng-show="myForm.zip.$dirty && myForm.zip.$invalid"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="idNo">Interest</label>
+                <input type="text" class="form-control" name="interest" placeholder="Interest" data-ng-model="formData.interest">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="phone">Phone #</label>
+                <input type="number" class="form-control" name="phone" data-ng-model="formData.phone" ui-mask="(999) 999-9999"
+                    placeholder="Phone Number" # ui-mask-placeholder="" ui-mask-placeholder-char="">
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="cell">Association</label>
+                <input type="text" class="form-control" name="association" data-ng-model="formData.association"
+                    placeholder="e,g,NBA, NFL" ui-mask-placeholder="" ui-mask-placeholder-char="">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group required">
+                <label for="idType">Married</label>
+                <select name="IdType" class="form-control" name="idType" data-ng-model="formData.married" required>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="idNo">Charities</label>
+                <input type="text" class="form-control" name="idNo" placeholder="Charities" data-ng-model="formData.charities">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="idNo">Team</label>
+                <input type="text" class="form-control" name="team" placeholder="e.g. New York Giants" data-ng-model="formData.team">
+            </div>
+        </div>
+       
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="wight">Social Link</label>
+                <input type="text" class="form-control" name="social" data-ng-model="formData.social" 
+                    placeholder="optional">      
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="wight">Description</label>
+                <textarea type="text" class="form-control" name="description" data-ng-model="formData.description" 
+                    placeholder="optional"></textarea>       
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <a ui-sref="form.interests" class="btn btn-block btn-info">
+            Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+            </a>
+        </div>
+    </div>
+</div>
+

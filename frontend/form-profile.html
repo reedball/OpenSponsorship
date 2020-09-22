@@ -1,0 +1,94 @@
+<div class="form-group">
+    <div class="col-md-4">
+        <div class="form-group required">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" data-ng-model="formData.firstName"
+                placeholder="Firstname" data-ng-pattern="/^[a-zA-Z]*$/" required>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="middleInitial">Middle Name</label>
+            <input type="text" class="form-control" name="middileName" data-ng-model="formData.middleName"
+                placeholder="Inital" data-ng-pattern="/^[a-zA-Z]*$/" data-ng-maxlength=4 required>
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <div class="form-group required">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" data-ng-model="formData.lastName"
+                placeholder="Lastname" data-ng-pattern="/^[a-zA-Z]*$/" required>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="middleInitial">Nationality</label>
+            <input type="text" class="form-control" name="nationality" data-ng-model="formData.nationality"
+                placeholder="Inital" data-ng-pattern="/^[a-zA-Z]*$/">
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group required">
+            <label for="idType">Sport</label>
+            <!-- <select class="form-control" ng-model="selectsport"><option ng-options="x in sports" value="{{x.name}}"> {{x.name}}</option></select> -->
+            <select name="IdType" class="form-control" name="sport" data-ng-model="formData.sport" required>
+                <option value="football">football</option>
+                <option value="basketball">basketball</option>
+                <option value="volleyball">Volley ball</option>
+                <option value="badminton">badminton</option>
+                <option value="tennis">tennis</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group required">
+            <label for="gender">Gender</label>
+            <select name="gender" class="form-control" data-ng-model="formData.gender" required>
+                <option value="" disabled selected>Please Select</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group required">
+            <label for="idType">State</label>
+            <select name="IdType" class="form-control" name="state" data-ng-model="formData.state" required>
+                <option value="newyork">NEW YORK</option>
+                <option value="wasington">WASINGTON</option>
+                <option value="utah">UTAH</option>
+                <option value="califonia">CALIFONIA</option>
+                <option value="new jesery">NEW JESERY</option>
+
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-md-6 required" data-ng-class="{'has-error':myForm.birthDate.$invalid && myForm.birthDate.$dirty}">
+        <label for="birthDate">Date Of Birth</label>
+        <p class="input-group doa-datepicker">
+            <input class="form-control" type="date" id="birthday" name="birthday" data-ng-model="formData.birthday">
+        </p>
+    </div>
+</div>
+
+
+<div class="form-group row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <a ui-sref="form.personal" class="btn btn-block btn-info">
+            Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

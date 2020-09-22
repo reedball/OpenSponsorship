@@ -1,0 +1,40 @@
+
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+  <div class="form-group">
+    <div ng-if="status" class="alert alert-success alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close" style="color: white;">&times;</a>
+      <strong>Success!</strong> User data was successfully registered!
+    </div>
+    <!-- <h2  class="alert alert-primary">Data saved successfully!</h2> -->
+  </div>
+  <div class="form-group">
+    <div ng-if="!datastatus" class="alert alert-warning alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close" style="color: white;">&times;</a>
+      <strong>Warning!</strong> Insert the Data in each form!
+    </div>
+    <!-- <h2 ng-if="!datastatus" class="alert alert-warning">Please insert data!</h2> -->
+  </div>
+  <div id="form-container">
+      <div class="page-header text-center">
+          <h2>Let's Be Friends</h2>
+          <div id="status-buttons" class="text-center">
+              <a ui-sref-active="active" ui-sref=".profile"><span>1</span> Basic Info</a>
+              <a ui-sref-active="active" ui-sref=".personal"><span>2</span> About</a>
+              <a ui-sref-active="active" ui-sref=".interests"><span>3</span> Summary</a>
+              <a ui-sref-active="active" ui-sref=".submit"><span>4</span> Submit</a>
+          </div>
+      </div>
+      
+      <form id="signup-form" name="myForm" ng-submit="processForm(formData)">
+          <div id="form-views" ui-view></div>
+      </form>
+  
+  </div>
+
+  <pre>
+    {{formData}}
+  </pre>
+</div>
+</div>
+

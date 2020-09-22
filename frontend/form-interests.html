@@ -1,0 +1,100 @@
+<div class="form-group">
+    <fieldset>
+        <legend>Basic Info </legend>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>First Name:</strong><span> {{formData.firstName}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Middle Initial: </strong> <span>{{formData.middleName}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Last Name:</strong><span> {{formData.lastName}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Last Name:</strong><span> {{formData.birthday}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Nationality:</strong> <span>{{formData.nationality}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Gender:</strong> <span>{{formData.gender}} </span>
+            </div>
+            <div class="col-md-4">
+                <strong>Date Of Birth:</strong> <span>{{formData.birthDate | date:"MM/dd/yyyy"}} </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>State:</strong> <span>{{formData.addressState}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Sport:</strong> <span>{{formData.sport}}</span>
+            </div>
+        </div>
+
+    </fieldset>
+    
+    
+    <fieldset class="top-buffer">
+        <legend> PERSONAL </legend>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Location</strong><span> {{formData.location}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Street 1: </strong> <span>{{formData.street1}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Street 2:</strong><span> {{formData.street2}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>County:</strong> <span>{{formData.county}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Zip Code:</strong> <span>{{formData.zip}} </span>
+            </div>
+            <div class="col-md-4">
+                <strong>Phone #:</strong> {{formData.phone}} </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Cell:</strong> <span>{{formData.cell}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>ID Type:</strong> <span>{{formData.married}} </span>
+            </div>
+            <div class="col-md-4">
+                <strong>ID#:</strong> <span> {{formData.charities}} </span>
+            </div>
+    
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Team:</strong> <span>{{formData.team}}</span>
+            </div>
+            <div class="col-md-12">
+                <strong>Social Link:</strong> <span>{{formData.social}}</span>
+            </div>
+            <div class="col-md-12">
+                <strong>Description:</strong> <span>{{formData.description}}</span>
+            </div>
+    
+        </div>
+    
+    </fieldset>
+
+</div>
+
+<div class="form-group row">
+<div class="col-xs-6 col-xs-offset-3">
+    <a ui-sref="form.submit" class="btn btn-block btn-info">
+    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+</div>
+</div>
